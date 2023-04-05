@@ -74,21 +74,21 @@ const imagesList = [
 ]
 
 class Gallery extends Component {
-  state = {image: imagesList[0].imageUrl, alt: imagesList[0].imageAltText}
+  state = {thumbnailId: imagesList[0].imageUrl}
 
   changingImage = id => {
     this.setState({
-      image: imagesList[id].imageUrl,
-      alt: imagesList[id].imageAltText,
+      thumbnailId: id,
     })
   }
 
   render() {
-    const {image, alt} = this.state
+    const {thumbnailId} = this.state
+    const {imageUrl, imageAltText} = imagesList[thumbnailId]
     return (
       <div className="bg">
         <div>
-          <img src={image} alt={alt} className="image" />
+          <img src={imageUrl} alt={imageAltText} className="image" />
         </div>
 
         <h1 className="heading">Nature Photography</h1>
