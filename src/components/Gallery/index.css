@@ -1,0 +1,14 @@
+.bg {
+  background-color: bisque;
+}
+.image {
+  width: 300px;
+}
+.heading {
+  color: black;
+  font-size: 20px;
+}
+.para {
+  color: brown;
+  font-size: 15px;
+}
